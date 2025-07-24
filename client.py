@@ -9,7 +9,7 @@ from mcp.client.stdio import stdio_client
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
-load_dotenv()  # load environment variables from .env
+load_dotenv()
 
 class MCPClient:
     def __init__(self):
@@ -45,7 +45,6 @@ class MCPClient:
         # List available tools
         response = await self.session.list_tools()
         tools = response.tools
-        print("\nConnected to server with tools:", [tool.name for tool in tools])
 
     async def process_query(self, query: str) -> str:
         """Process a query using Claude and available tools"""
@@ -117,7 +116,6 @@ class MCPClient:
     
     async def chat_loop(self):
         """Run an interactive chat loop"""
-        print("\nMCP Client Started!")
         print("Type your queries or 'quit' to exit.")
 
         while True:
