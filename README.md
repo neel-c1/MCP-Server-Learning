@@ -13,6 +13,8 @@ This is a place where I learn more about how MCP servers work. Aims to use a Lan
 ```
 git clone https://www.github.com/neel-c1/MCP-Server-Learning.git/
 cd MCP-Server-Learning
+cp -r .env.example .env
+// Copy paste in your Anthropic key
 uv venv
 source .venv/bin/activate
 uv add "mcp[cli]" httpx anthropic python-dotenv
