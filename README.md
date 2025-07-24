@@ -18,5 +18,5 @@ cp -r .env.example .env
 uv venv
 source .venv/bin/activate
 uv add "mcp[cli]" httpx anthropic python-dotenv
-python3 client.py ./server/weather.py
+uv run client.py ./server/weather.py
 ```
