@@ -15,8 +15,9 @@ git clone https://www.github.com/neel-c1/MCP-Server-Learning.git/
 cd MCP-Server-Learning
 cp -r .env.example .env
 # (Copy paste in your OpenAI API key)
-uv venv
+python3 -m venv .venv
 source .venv/bin/activate
-uv add "mcp[cli]" httpx openai==0.28 python-dotenv
-uv run client.py ./server/weather.py
+pip3 install -U pip
+pip3 install -r ./docs/requirements.txt
+python3 run client.py ./server/weather.py
 ```
